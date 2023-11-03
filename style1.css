@@ -1,0 +1,38 @@
+body {
+	display: flex;
+	height: 100vh;
+    justify-content: center;
+    align-items: center;
+	background-color:#212130;
+  }
+  .content {
+    text-align: center;
+	border: 1px solid #212130; 
+    border-radius: 20px; 
+    padding: 20px; 
+	background-color:#33333f;
+  }
+  .Image img {
+    display: block;
+    margin: 0 auto;
+  }
+  h3 {
+	color: #be6d26;
+	font-family:Comic Sans MS;
+	font-size: 14px;
+	border-radius: 50px; 
+	padding: 5px; 
+	background-color: #47474d; 
+	display: inline-block; 
+  }
+  h2 {
+	color: #ffff;
+	font-family:Comic Sans MS;
+	font-size: 14px;
+  }
+  p {
+	color: #8a8a91;
+	font-family:Comic Sans MS;
+	font-size: 14px;
+	margin: 5px 0;
+  }

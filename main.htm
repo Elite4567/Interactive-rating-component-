@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive rating component</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="icon-star.svg"><br/><br/>
+        <h2 style="color:#ffff;">How did we do?</h2>
+        <p style="color:#8e8e92;">Please let us know how we did with your support</p>
+        <p style="color:#8e8e92;">request. All feedback is accepted to help us</p>
+        <p style="color:#8e8e92;">improve our offering!</p>
+        <div class="btn-group" role="group" aria-label="Rating Buttons">
+            <button type="button" class="btn btn-secondary" data-rating="1">1</button>
+            <button type="button" class="btn btn-secondary" data-rating="2">2</button>
+            <button type="button" class="btn btn-secondary" data-rating="3">3</button>
+            <button type="button" class="btn btn-secondary" data-rating="4">4</button>
+            <button type="button" class="btn btn-secondary" data-rating="5">5</button>
+        </div>
+		<br/>
+		<br/>
+        <button type="submit" class="center-align">Submit</button>
+    </div>
+</body>
+<script>
+  const ratingButtons = document.querySelectorAll('.btn-group button');
+  ratingButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      ratingButtons.forEach((btn) => {
+        btn.style.backgroundColor = '#33333f';
+        btn.style.color = '#fff';
+      });
+      button.style.backgroundColor = '#ea7b12';
+      button.style.color = '#000';
+      const selectedRating = parseInt(button.getAttribute('data-rating'));
+      for (let i = 0; i < selectedRating - 1; i++) {
+        ratingButtons[i].style.backgroundColor = '#808080'; 
+        ratingButtons[i].style.color = '#fff';
+      }
+      console.log('Selected rating: ' + selectedRating);
+      if (selectedRating === 1) {
+        window.location.href = 'ThankYou-Rating1.htm';
+      }
+	  if (selectedRating === 2) {
+        window.location.href = 'ThankYou-Rating2.htm';
+      }
+	  if (selectedRating === 3) {
+        window.location.href = 'ThankYou-Rating3.htm';
+      }
+	  if (selectedRating === 4) {
+        window.location.href = 'ThankYou-Rating4.htm';
+      }
+	  if (selectedRating === 5) {
+        window.location.href = 'ThankYou-Rating5.htm';
+      }
+    });
+  });
+</script>
+</html>
